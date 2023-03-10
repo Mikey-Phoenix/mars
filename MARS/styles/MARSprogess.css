@@ -1,0 +1,323 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+@property --p{
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 1;
+}
+
+.pie{
+    --p:20;
+    --b:22px;
+    --c:darkred;
+    --w:150px;
+
+    min-width: var(--w);
+    aspect-ratio: 1;
+    position: relative;
+    display: inline-grid;
+    margin: 5px;
+    place-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.pie:before,
+.pie:after{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.pie:before{
+    inset: 0;
+    background: radial-gradient(farthest-side,var(--c) 98%,#0000)
+    top/var(--b) var(--b) no-repeat, conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+    mask: radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)))
+}
+.pie:after{
+    inset: calc(50% - var(--b)/2);
+    background: var(--c);
+    transform: rotate(calc(var(--p)*3.6deg))
+    translateY(calc(50% - var(--w)/2))
+}
+.animate{
+    animation: p 1s .5s both;
+}
+.no-round:before{
+    background-size: 0 0, auto;
+}
+.no-round:after{
+    content: none;
+}
+@keyframes p{
+    from{--p:0}
+}
+
+
+@keyframes fadeIn {
+    0%{
+        transform: translate(-50%, -60%);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    0%{
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+    100%{
+        transform: translate(-50%, -40%);
+        opacity: 0;
+    }
+}
+.paperContainer{
+    transition: all ease .4s;
+}
+.overPaper{
+    /* max-height: fit-content; */
+    background-color: rgb(55, 55, 58);
+    width: 70%;
+    position: relative;
+}
+.overPaper h1{
+    /* position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%); */
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 70px;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.overBack{
+    /* left: 14%; */
+    background-color: white;
+    color: rgb(55, 55, 58);
+}
+
+.paper{
+    /* background-color: lightcoral; */
+    /* background-color: lemonchiffon; */
+    /* background-color: rgb(55, 55, 58); */
+    z-index: 200;
+    width: 100%;
+    height: 95vh;
+    margin: 10px auto 0px auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.pieContainer{
+    min-width: var(--w);
+}
+
+
+.remarks{
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-style: italic;
+}
+.barsContainer{
+    width: 500px;
+}
+.bar{
+    /* background-color: rgb(55, 55, 58); */
+    transition: all ease .3s;
+    border-radius: 5px;
+    padding: 10px;
+    /* height: 120px; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+.bar:hover{
+    background-color: rgb(68, 68, 71);
+}
+.bar h3{
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+.progress-bar{
+    background-color: rgb(78, 78, 82);
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+}
+.progress-bar div{
+    height: 100%;
+    border-radius: inherit;
+    width: 0%;
+    background-color: red;
+    transition: all ease 2s;
+}
+.progress-bar div span{
+    height: 50px;
+    width: 50px;
+    font-size: 18px;
+    border-radius: 50%;
+    border: 1px solid red;
+    background-color: rgb(55, 55, 58);
+    float: right;
+    margin-top: -25px;
+    /* margin-bottom: 20px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes fadeDown {
+    0%{
+        opacity: 0;
+        top: -100%
+    }
+    100%{
+        opacity: 1;
+        top: 100%;
+    }
+}
+@keyframes fadeUp {
+    0%{
+        opacity: 1;
+        top: 100%;
+    }
+    100%{
+        opacity: 0;
+        top: -100%;
+    }
+}
+.bar p{
+    padding: 10px;
+    background-color: rgb(68, 68, 71);
+    z-index: 100;
+    position: absolute;
+    top: -100%;
+    left: 0%;
+    opacity: 0;
+    display: none;
+    transition: all ease .3s;
+    animation: fadeDown .8s;
+}
+.paragraph{
+    background-color: rgb(68, 68, 71);
+    font-size: 20px;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    /* border: 1px solid red; */
+    /* margin-bottom: 100px; */
+}
+.barsContainer .missed{
+    background-color: rgb(68, 68, 71);
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 768px) {
+    .paper{
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: fit-content;
+    }
+    .overPaper{
+        height: 95vh;
+    }
+    .overPaper h1{
+        font-size: 30px;
+        margin-top: 70px;
+        margin-bottom: 50px;
+    }
+    .barsContainer{
+        margin-top: 50px;
+        width: 85%;
+    }
+    .bar h3{
+        font-size: 20px;
+    }
+    .progress-bar div span{
+        font-size: 15px;
+    }
+    .bar p{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 100px) {
+    .paper{
+        height: max-content;
+        /* border: 1px solid red; */
+        /* margin-top: 20px; */
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .overPaper{
+        width: 90%;
+        height: 95vh !important;
+    }
+    .overPaper h1{
+        /* top: 0%; */
+        position: static;
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+        margin-top: 70px;
+        /* margin-bottom: 10%; */
+        /* margin-bottom: -30px; */
+        transform: translateX(0%);
+    }
+    .barsContainer{
+        width: 85%;
+    }
+    .overBack{
+        display: flex;
+        width: 50px;
+        font-size: 15px;
+    }
+    .bar h3{
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    .barsContainer .missed{
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    .progress-bar div span{
+        width: 20px;
+        height: 20px;
+        font-size: 6px;
+        transform: translateY(90%);
+    }
+    .bar p{
+        font-size: 10px;
+    }
+    .paragraph{
+        margin-top: -20px;
+        font-size: 10px;
+    }
+    .remarks{
+        font-size: 10px;
+        margin-bottom: 20px;
+    }
+}

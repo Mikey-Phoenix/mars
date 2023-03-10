@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="profilesDets">
+        <img src="../../images/profile.jpg" alt="">
+        <div class="profileName">
+            <h1>Bajo Michael Oluwafisayomi</h2>
+        </div>
+    </div>
+    <div class="quickMenu">
+        <a href="#!/activities" class="btns"><i class="fa-solid fa-chart-line"></i> <span>Activities</span></a>
+        <a href="#!/students" class="btns"><i class="fa-solid fa-people-group"></i> <span>Students</span></a>
+        <a href="#!/news" class="btns"><i class="fa-solid fa-newspaper"></i> <span>M.A.R.S. News</span></a>
+        <a href="#!/comments" class="btns"><i class="fa-solid fa-comments"></i> <span>Comments</span></a>
+        <a href="#!/challenges" class="btns"><i class="fa-solid fa-gamepad"></i> <span>Challenges</span></a>
+        <a href="#!/" class="btns"><i class="fa-solid fa-arrow-right-from-bracket"></i> <span>Resign</span></a>
+    </div>
+
+    <main>
+        <div class="student" ng-repeat="student in students">
+            <img src="../../images/profile.jpg" alt="">
+            <p>{{ student.id }}</p>
+            <h4 class="name">{{student.lastName}} {{student.firstName}} {{student.middleName}}</h4>
+            <div class="student-cast" onclick="adminDisplay()"></div>
+        </div>
+    </main>
+
+    <section id="profile-section">
+        <button class="return" style="position: absolute; top: 0%; left: 2%;" onclick="closeAdmin()">Back</button>
+        <div class="profilesDets">
+            <img src="../../images/profile.jpg" alt="">
+            <div class="profileName">
+                <h1>Bajo Michael Oluwafisayomi</h2>
+            </div>
+        </div>
+
+        <div class="editContainer">
+            <div class="editItem" onclick="dropStuff(0)">
+                <div>
+                    <h4>Subject</h4>
+                    <span>26th January, 2006</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis praesentium minima, excepturi suscipit alias fuga vero! At, excepturi iusto nulla porro quis optio explicabo fuga. Nisi deleniti iste possimus in.</p>
+            </div>
+            <div class="editItem" onclick="dropStuff(1)">
+                <div>
+                    <h4>Subject</h4>
+                    <span>26th January, 2006</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis praesentium minima, excepturi suscipit alias fuga vero! At, excepturi iusto nulla porro quis optio explicabo fuga. Nisi deleniti iste possimus in.</p>
+            </div>
+            <div class="editItem" onclick="dropStuff(2)">
+                <div>
+                    <h4>Subject</h4>
+                    <span>26th January, 2006</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis praesentium minima, excepturi suscipit alias fuga vero! At, excepturi iusto nulla porro quis optio explicabo fuga. Nisi deleniti iste possimus in.</p>
+            </div>
+        </div>
+    </section>
+    
+</div>

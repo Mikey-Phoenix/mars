@@ -1,0 +1,456 @@
+*{
+
+    padding: 0%;
+    margin: 0%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+*::-webkit-scrollbar{
+    /* background-image: url('../images/star-background-nav.jpg'); */
+    background-color: rgb(55, 55, 58);
+    width: 10px;
+}
+*::-webkit-scrollbar-thumb{
+    background-image: linear-gradient( rgb(55, 55, 58), white);
+    width: 100%;
+    border-radius: 5px;
+}
+body{
+    /* background-color: rgb(55, 55, 58); */
+    background-image: url('../images/star-background.jpg');
+    background-size: cover;
+}
+.hero{
+    min-height: fit-content;
+    padding: 0%;
+    margin: 0%;
+    background-repeat: no-repeat;
+    font-size: 22px;
+    transition: all ease-in-out .8s;
+}
+.nav{
+    background-color: rgb(54, 55, 58);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 200;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;    
+    top: 0px;
+    position: fixed;
+    padding-bottom: 5px;
+    transition: all ease .5s;
+}
+.nav .navingLinks{
+    margin-right: 30px;
+    color: white;
+}
+.nav .links .dropdown{
+    display: none;
+}
+.nav a{
+    z-index: 200;
+    color: black;
+    font-size: 25px;
+    text-decoration: none;
+}
+.nav .home{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    padding: 0px 10px;
+    
+    color: skyblue;
+    border-radius: 10px;
+}
+.nav .active-page{
+    text-decoration: underline;
+}
+.nav .navingLinks:hover{
+    color: skyblue;
+}
+.nav .home .main{
+    font-size: 40px;
+    font-weight: 600;
+    border-bottom: 1px solid skyblue;
+}
+.nav .home .sub{
+    font-size: 10px;
+    border-bottom: 1px solid skyblue;
+}
+.dropdownNav{
+    display: none;
+}
+
+section{
+    background-color: white;
+    color: rgb(55, 55, 58);
+    border: 2px solid rgb(55, 55, 58);
+    border-radius: 15px;
+    width: 70%;
+    margin: auto;
+    padding: 20px;
+    margin-top: 100px;
+    transition: all ease .3s;
+    /* overflow-x: hidden; */
+}
+section .paper-name{
+    /* background-image: url('../images/star-background.jpg'); */
+    /* background-color: white; */
+    border: 2px solid rgb(55, 55, 58);
+    border-radius: 15px;
+    height: 200px;
+    padding-left: 30px;
+    font-size: 70px;
+    display: flex;
+    color: skyblue;
+    font-weight: bold;
+    /* font-style: italic; */
+    align-items: center;
+}
+section .date{
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+section .sub-container{
+    display: flex;
+}
+section .sub-container aside{
+    width: 30%;
+    padding: 0px 20px;
+}
+section .sub-container aside .random-headline{
+    flex-direction: column;
+    justify-content: space-between;
+    height: 93%;
+}
+section .sub-container .mini-container{
+    width: 70%;
+}
+section .paper-name span{
+    font-weight: normal;
+    color: rgb(151, 52, 52);
+    font-family: cursive;
+    font-style: italic;
+    margin: 0px 20px;
+}
+section .random-headline{
+    margin: 30px 0px;
+    display: flex;
+    justify-content: space-evenly;
+}
+section .mini-container .random-headline:nth-child(1){
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+section .random-headline .just-words{
+    height: 200px;
+    /* width: 200px; */
+    border: 2px solid rgb(55, 55, 58);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .random-headline .inner{
+    width: 30%;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid rgb(55, 55, 58);
+    border-radius: 15px;
+}
+section aside .random-headline .inner{
+    width: 100%;
+}
+section .random-headline .inner.bottom-page{
+    width: 40%;
+}
+section .mini-container .random-headline .inner img{
+    width: 100%;
+}
+section .random-headline .inner h4{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid green; */
+    width: 100%;
+    height: 30%;
+    bottom: 0%;
+    padding-left: 10px;
+    background-image: linear-gradient(180deg, transparent, rgb(55, 55, 58));
+}
+section .main-headline{
+    /* background-color: white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(55, 55, 58);
+    border-radius: 15px;
+    height: 200px;
+    font-size: 50px;
+}
+
+@keyframes fadeIn {
+    0%{
+        transform: translate(-50%, -60%);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    0%{
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+    100%{
+        transform: translate(-50%, -40%);
+        opacity: 0;
+    }
+}
+.overAllContainer{
+    padding-top: 1%;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    z-index: 300;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(255, 255, 255, 0.651);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all ease .4s;
+}
+.castContainer{
+    position: relative;
+}
+.castUp{
+    position: absolute;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    /* background-image: linear-gradient(transparent, rgb(55, 55, 58)); */
+    background-image: linear-gradient(transparent, rgb(213, 213, 228));
+}
+/* .castDown{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgb(55, 55, 58), transparent);
+} */
+.overAll{
+    background-color: rgb(213, 213, 228);
+    color: rgb(54, 55, 58);
+    width: 80%;
+    height: 80%;
+    padding-bottom: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: scroll;
+    animation: fadeIn .8s;
+}
+
+.back{
+    z-index: 400;
+    background-color: rgb(55, 55, 58);
+    box-shadow: 0px 0px 15px rgb(55, 55, 58);
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    top: 12%;
+    left: 5%;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+.upperimg{
+    height: 400px;
+    width: 100%;
+}
+/* .lowerimg{
+    height: 400px;
+    width: 100%;
+} */
+#overAllWords{
+    margin: auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.overAllDetails{
+    text-align: justify;
+    /* text-align: center; */
+    position: relative;
+}
+
+.overAll .date{
+    position: relative;
+    right: -40%;
+    margin-top: 20px;
+    font-family: cursive;
+    font-style: italic;
+    text-decoration: underline;
+    opacity: 0.5;
+}
+
+.overAll::-webkit-scrollbar{
+    background-image: none;
+    background-color: rgb(213, 213, 228) !important;
+    width: 10px;
+    border-radius: 5px;
+}
+.overAll::-webkit-scrollbar-thumb{
+    background-image: linear-gradient( rgb(213, 213, 228), black);
+    width: 100%;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 768px) {
+    section{
+        width: 90%;
+    }
+    section .sub-container{
+        flex-direction: column;
+    }
+    section .sub-container aside{
+        width: calc(100% - 40px);
+    }
+    section .sub-container aside .random-headline{
+        flex-direction: row;
+    }
+    section .sub-container .mini-container{
+        width: calc(100% - 40px);
+    }
+    section .paper-name{
+        font-size: 50px;
+    }
+    section .main-headline{
+        font-size: 40px;
+    }
+    .overAll .date{
+        right: -30%;
+    }
+    .overAll{
+        overflow-x: hidden;
+    }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 100px) {
+    .nav .navingLinks{
+        display: none !important;
+    }
+    .nav .home .main{
+        font-size: 30px;
+    }
+    .nav .home .sub{
+        font-size: 7px;
+    }
+    .nav .links .dropdown{
+        display: block;
+        color: white;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    .dropdownNav{
+        display: block;
+        z-index: -1;
+        background-color: rgb(55, 55, 58);
+        position: absolute;
+        top: -300%;
+        width: 100%;
+        padding: 10px;
+        /* background-color: gray; */
+        transition: all ease .3s;
+    }
+    .dropNavItem{
+        display: block;
+        color: white !important;
+        text-decoration: none;
+        margin-top: 10px;
+        width: 90%;
+        font-size: 20px;
+        border-bottom: 1px solid rgb(82, 82, 85);
+    }
+    section{
+        width: 80vw;
+    }
+    section .sub-container{
+        flex-direction: column;
+    }
+    section .sub-container aside{
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    section .sub-container aside .random-headline{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+        /* flex-direction: row; */
+    }
+    section .sub-container aside .random-headline .inner img{
+        width: 100%;
+    }
+    section .sub-container .mini-container{
+        width: 100%;
+        /* display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; */
+    }
+    section .sub-container .mini-container .random-headline .just-words{
+        height: fit-content;
+        padding: 10px;
+        font-size: 10px;
+    }
+    section .paper-name{
+        flex-wrap: wrap;
+        font-size: 30px;
+        padding-left: 0px;
+        height: 100px;
+    }
+    section .paper-name span{
+        margin: 0px 10px;
+    }
+    section .date{
+        font-size: 8px;
+    }
+    section .main-headline{
+        font-size: 20px;
+        height: 100px;
+    }
+    section .random-headline .inner h4{
+        font-size: 10px;
+    }
+    .back{
+        width: 60px;
+        font-size: 20px;
+    }
+    .overAll .overAllHeading{
+        font-size: 30px;
+    }
+    .overAll .overAllDetails{
+        font-size: 15px;
+    }
+    .overAll .date{
+        font-size: 15px;
+        right: -20%;
+    }
+}

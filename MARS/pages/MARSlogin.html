@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/MARSlogin.css">
+    <script src="https://kit.fontawesome.com/35b2c289c2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="formContainer">
+        <form action="" onsubmit="sendRequest(); reset(); return false;">
+            <p class="suspended">Your account has been suspended for 24Hrs due to suspiscious activities</p>
+            <input type="text" placeholder="Student ID" id="ID" required>
+            <input type="password" placeholder="password" id="password">
+            <i class="fa-solid fa-eye-slash"></i>
+            <input type="email" placeholder="Email Address" class="complaint  none">
+            <p class="incorrect">Incorrect password, you have <span class="number"></span> tries left</p>
+            <input type="submit" value="Log In" class="submit">
+            <input type="submit" value="Send Request" class="submit none">
+        </form>
+        <p class="forgot">Forgot Password?</p>
+        <p class="sign forgot" style="left: 5%;">No account yet?</p>
+    </div>
+
+    <div class="cast">
+        <div class="title">
+            <h1>M.A.R.S.</h1>
+            <p class="meaning">Music and Arts Reinvention School</p>
+            <span id="about">   </span>
+        </div>
+        <div class="sheet white">
+            <form action="" id="signUpform">
+                <input type="text" id="fullname" placeholder="Full Name" class="FirstName input white" required>
+                <input type="email" id="email" placeholder="Email Address" class="input white" required>
+                <input type="date" id="date" placeholder="Date of Birth" class="inputSmall white" required>
+                <div class="gender-container">
+                    <input type="radio" onclick="showme()" name="gender" id="Female" class=" checkbox white">
+                    <label for="Female" class="Gender" >Female</label>
+                </div>
+                <div class="gender-container">
+                    <input type="radio" onclick="showme()" name="gender" id="Male" class=" checkbox white">
+                    <label for="Male" class="Gender" >Male</label>
+                </div>
+                <div class="gender-container">
+                    <input type="radio" onclick="showme()" name="gender" id="Other" class=" checkbox white">
+                    <label for="Other" class="Gender" >Other</label>
+                </div>
+                <label class="text" for="talents">Your Talents</label>
+                <input type="text" id="talents" class="data white">
+                <label class="text" for="info">Any personal info?</label>
+                <input type="text" id="info" class="data white">
+    
+                <input type="submit" id="Submit">
+                <p class="logger forgot">I already have an account</p>
+            </form>
+            <div class="signOptions">
+                <button>Sign Up Manually</button>
+                <button>Sign Up With Google</button>
+                <button class="bottom">Sign Up With Facebook</button>
+                <p class="grey">Music and Arts Reinvention School(M.A.R.S.)</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="successContainer">
+        <div class="success">
+            <div class="successIcon"></div>
+            <div class="successMessage">Welcome <span>Nickname</span></div>
+            <a href="./MARSstudentPage.html"><button>Ok</button></a>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.3.0/firebase-app-compat.js"></script>
+    <script src="http://www.gstatic.com/firebasejs/9.3.0/firebase-firestore-compat.js"></script>
+    <script src="http://www.gstatic.com/firebasejs/9.3.0/firebase-auth-compat.js"></script> -->
+    <!-- <script src="../firebase.js.map"></script> -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="../javascript/MARSlogin.js"></script>
+
+
+</body>
+</html>

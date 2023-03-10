@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="routeApp">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../javascript/angular.js"></script>
+        <script src="../javascript/angular-route.js"></script>
+        <script src="./admins/students.js"></script>
+        <link rel="stylesheet" href="../styles/MARSadminPage.css">
+        <link rel="stylesheet" href="../styles/MARSadminPageResponsiveness.css">
+        <script src="https://kit.fontawesome.com/35b2c289c2.js" crossorigin="anonymous"></script>
+        <title>Document</title>
+    </head>
+    <body ng-controller="routeController"  ng-app="stud">
+        <div class="naver">
+            <div class="home" onclick="slideIn()">
+                <img src="../images/profile.jpg" alt="" width="70px" style="border-radius: 50%;">
+                <h3>Bajo Michael</h3>
+            </div>
+            <div class="links">
+                <a href="./MARS.html" class="navingLinks">Home</a>
+                <a href="./MARS.html#about" class="navingLinks">About</a>
+                <a href="./MARS.html#contact" class="navingLinks">Contact</a>
+                <a href="./MARSnews.html" class="navingLinks">News</a>
+                <div class="dropdown" onclick="dropdown()"><i class="fa-solid fa-angle-down"></i></div>
+            </div>
+        </div> 
+        <div class="navbar nav">
+            <div class="links">
+                <a href="#!/profile" class="navingLinks navbarLinks"><i class="fa-solid fa-user"></i> Profile</a>
+                <a href="#!/activities" class="navingLinks navbarLinks"><i class="fa-solid fa-chart-line"></i> Activities</a>
+                <a href="#!/students" class="navingLinks navbarLinks"><i class="fa-solid fa-people-group"></i> Students</a>
+                <a href="#!/news" class="navingLinks navbarLinks"><i class="fa-solid fa-newspaper"></i> M.A.R.S. News</a>
+                <a href="#!/comments" class="navingLinks navbarLinks"><i class="fa-solid fa-comments"></i> Comments</a>
+                <a href="#!/challenges" class="navingLinks navbarLinks"><i class="fa-solid fa-gamepad"></i> Challenges</a>
+                <!-- <span class="burger-visible {{class}}" ng-click="dropdown()"></span> -->
+            </div>
+        </div>
+        
+        <ng-view></ng-view>
+
+        <div class="scrolltic">
+            <div class="updates">
+                <div class="update"><span>STUD1001</span><span>6/01/2023</span></div>
+                <div class="update"><span>STUD1001</span><span>6/01/2023</span></div>
+                <div class="update"><span>STUD1001</span><span>6/01/2023</span></div>
+                <div class="update"><span>STUD1001</span><span>6/01/2023</span></div>
+                <div class="update"><span>STUD1001</span><span>6/01/2023</span></div>
+                <div class="update"><span>STUD1001</span><span>6/01/2023</span></div>
+                <div class="update"><span>STUD1001</span><span>6/01/2023</span></div>
+            </div>
+            <i class="fa-solid fa-gamepad" onclick="scaleUp(0)"></i>
+        </div>
+        <div class="scrolltic" id="poles">
+            <div class="updates">
+                <div class="update" onclick="yesOrNo(0)">
+                    <div>
+                        <span>STUD1001</span><span>Expulsion</span><span>6/01/2023</span>
+                    </div>
+                </div>
+                
+                <div class="update" onclick="yesOrNo(1)">
+                    <div>
+                        <span>STUD1001</span><span>Expulsion</span><span>6/01/2023</span>
+                    </div>
+                </div>
+                
+                <div class="update" onclick="yesOrNo(2)">
+                    <div>
+                        <span>STUD1001</span><span>Expulsion</span><span>6/01/2023</span>
+                    </div>
+                </div>
+                
+                <div class="update" onclick="yesOrNo(3)">
+                    <div>
+                        <span>STUD1001</span><span>Expulsion</span><span>6/01/2023</span>
+                    </div>
+                </div>
+                
+                <div class="update" onclick="yesOrNo(4)">
+                    <div>
+                        <span>STUD1001</span><span>Expulsion</span><span>6/01/2023</span>
+                    </div>
+                </div>
+                
+                <div class="update" onclick="yesOrNo(6)">
+                    <div>
+                        <span>STUD1001</span><span>Expulsion</span><span>6/01/2023</span>
+                    </div>
+                </div>
+                
+                <div class="update" onclick="yesOrNo(7)">
+                    <div>
+                        <span>STUD1001</span><span>Expulsion</span><span>6/01/2023</span>
+                    </div>
+                </div>
+                
+            </div>
+            <i class="fa-solid fa-gamepad" onclick="scaleUp(1)"></i>
+        </div>
+
+        <section id="allyItem">
+            <div class="allyte">
+                <div class="editItem" style="background-color: white;">
+                    <div>
+                        <h4>Title</h4>
+                        <span>26th January, 2006</span>
+                    </div>
+                    <p style="height: max-content;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis praesentium minima, excepturi suscipit alias fuga vero! At, excepturi iusto nulla porro quis optio explicabo fuga. Nisi deleniti iste possimus in.</p>
+                    <div class="choice">
+                        <span><input type="radio" style="display: none;" name="decision" id="yes1"></span>
+                        <label for="yes1" style="border-color: limegreen; color: limegreen;">Yes</label>
+                        <span><input type="radio" style="display: none;" name="decision" id="no1"></span>
+                        <label for="no1"style="border-color: rgb(247, 91, 91); color: rgb(247, 91, 91);">No</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="preloader">
+            <div class="system">
+        
+                <div class="orbit saturn">
+                    <div class="planet"></div>
+
+                    <div class="orbit jupiter">
+                        <div class="planet"></div>
+
+                        <div class="orbit mars">
+                            <div class="planet"></div>
+
+                            <div class="orbit earth">
+                                <div class="planet"></div>
+
+                                <div class="orbit venus">
+                                    <div class="planet"></div>
+
+                                    <div class="orbit mercury">
+                                        <div class="planet"></div>
+                                        <div class="sun"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="../javascript/route.js"></script>
+    </body>
+</html>

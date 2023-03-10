@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/MARSstudentPage.css">
+    <link rel="stylesheet" href="../styles/MARSprogess.css">
+    <script src="https://kit.fontawesome.com/35b2c289c2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class="nav">
+        <div class="navName" onclick="details()">
+            <img src="../images/profile.jpg" alt="">
+            <div class="navNamePro">Nickname</div>
+        </div>
+        <div class="links">
+            <a href="./MARS.html" class="navingLinks">Home</a>
+            <a href="./MARS.html#about" class="navingLinks">About</a>
+            <a href="./MARS.html#contact" class="navingLinks">Contact</a>
+            <a href="./MARSnews.html" class="navingLinks">News</a>
+            <div class="dropdown"><i class="fa-solid fa-angle-down"></i></div>
+        </div>
+    </div>
+    <div class="hero">
+        <div class="imageHolder">
+            <img src="../images/profile.jpg" alt="" class="Person-image">
+            <div class="cast">
+                <label for="file" class="file">Change Image</label>
+                <input type="file" id="file" accept="image/png image/jpg">
+            </div>
+        </div>
+        <div class="info">
+            <div class="otherInfo view">
+                <div class="option"><i class="fa-solid fa-diagram-project"></i><span>Projects</span></div>
+                <div class="option" onclick="editting()"><i class="fa-solid fa-pen"></i> <span>Edit Profile</span></div>
+                <a href="./MARS.html" class="option out"><i class="fa-solid fa-arrow-right-from-bracket"></i> <span>Log Out</span></a>
+            </div>
+            <div class="nickname view">Nickname</div>
+            <div class="editt">Nickname : <input type="text"></div>
+            <div class="name view"><span id="last">Bajo</span> <span class="editing"><i class="fa-solid fa-pen"></i></span><span id="first"> Michael</span> <span class="editing"><i class="fa-solid fa-pen"></i></span><span id="middle"> Oluwafisayomi</span> <span class="editing"><i class="fa-solid fa-pen"></i></span></div>
+            <div class="names">
+                <input type="text" placeholder="Last" class="editt">
+                <input type="text" placeholder="First" class="editt">
+                <input type="text" placeholder="Middle" class="editt">
+            </div>
+            <div class="inner">
+                <div class="age view">Age: <span class="ageInner">16</span>yrs</div>
+                <div class="age editt">Age : <input type="number"></div>
+                <div class="when">Joined M.A.R.S. on <span class="date">2020</span></div>
+            </div>
+            <div class="editt" id="email-edit">Email Address : <input type="email"></div>
+            <div class="editt" id="gender-edit">Gender : <input type="text"></div>
+            <div class="innerInfo view">
+                <div class="option" onclick="scores()"><i class="fa-solid fa-chart-line"></i> <span>Stats</span></div>
+                <div id="notifications" class="option" onclick="notify()"><i class="fa-solid fa-bell"></i> <span>Notifications</span></div>
+                <!-- <div class="option">Art Works</div> -->
+            </div>
+            <div class="option" id="exit">Save Changes</div>
+        </div>
+    </div>
+    
+    <div class="overAllContainer">
+        <div class="overAll">
+            <div class="toppers">
+                <div class="back toppersBack">&#10132</div>
+                <div class="toppersSub">
+                    <div class="back toppersBack" style="transform: rotate(180deg); width: 100px; margin: 0px 5px; display: flex;"><i class="fa-solid fa-thumbtack"></i></div>
+                    <div class="back toppersBack" style="transform: rotate(360deg); width: 100px; margin: 0px 5px; display: flex;"><i class="fa-solid fa-box-archive"></i></div>
+                    <div class="back toppersBack" style="transform: rotate(360deg); width: 100px; margin: 0px 5px; display: flex;"><i class="fa-solid fa-trash"></i></div>
+                </div>
+                <div class="back close toppersBack">Close</div>
+            </div>
+            <div class="overAllWords" style="margin-top: 60px">
+                <h3 class="overAllHeading">Heading One</h3><br/>
+                <p class="overAllDetails">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur, qui amet sint omnis reprehenderit modi commodi hic obcaecati officia numquam dolor quibusdam neque autem, non corporis doloribus reiciendis libero voluptatibus!</p>
+                <div class="date">26th January, 2006</div>
+            </div>
+            <div class="overAllWords">
+                <h3 class="overAllHeading">Heading Two</h3><br/>
+                <p class="overAllDetails">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur, qui amet sint omnis reprehenderit modi commodi hic obcaecati officia numquam dolor quibusdam neque autem, non corporis doloribus reiciendis libero voluptatibus!</p>
+                <div class="date">26th January, 2006</div>
+            </div>
+            <div class="overAllWords">
+                <h3 class="overAllHeading">Heading Three</h3><br/>
+                <p class="overAllDetails">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur, qui amet sint omnis reprehenderit modi commodi hic obcaecati officia numquam dolor quibusdam neque autem, non corporis doloribus reiciendis libero voluptatibus!</p>
+                <div class="date">26th January, 2006</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="overAllContainer paperContainer">
+        <div class="overAll overPaper">
+            <div class="back overBack">&#10132</div>
+            <h1>Your Perfomance</h1>
+            <div class="paper">
+                <div class="pieContainer">
+                    <!-- <div class="pie animate " style="--p:90; --c:lightgreen; --b:15px"> 90%</div> -->
+                </div>
+
+                <div class="barsContainer">
+                    <div class="bar">
+                        <h3>Challenges Won</h3>
+                        <div class="progress-bar">
+                            <div id="won" class="won"><span>0.0%</span></div>
+                            <p class="p-words">This bar shows the percentage of the number of challenges you've won. You get 5points for every challenge you win, these points will be used to calculate your overall score so you can guage your progress since you joined M.A.R.S.
+                                Currently, you've won <span class="num"></span> out of <span class="total"></span> challenges
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bar">
+                        <h3>1<sup>st</sup>Runner Up</h3>
+                        <div class="progress-bar">
+                            <div id="second" class="second"><span>0.0%</span></div>
+                            <p class="p-words">This bar shows the percentage of the number of challenges you came in second place. You get 4points for every time you come up as the 1<sup>st</sup>Runner Up, these points will be used to calculate your overall score so you can guage your progress since you joined M.A.R.S.
+                                Currently, you've come in 2nd in <span class="num"></span> out of <span class="total"></span> challenges
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bar">
+                        <h3>2<sup>nd</sup>Runner Up</h3>
+                        <div class="progress-bar">
+                            <div id="third" class="third"><span>0.0%</span></div>
+                            <p class="p-words">This bar shows the percentage of the number of challenges you came in third place. You get 3points for every time you come up as 2<span>nd</span>Runner Up, these points will be used to calculate your overall score so you can guage your progress since you joined M.A.R.S.
+                                Currently, you've come in 3rd in <span class="num"></span> out of <span class="total"></span> challenges
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bar">
+                        <h3>Challenges Lost</h3>
+                        <div class="progress-bar">
+                            <div id="lost" class="lost"><span>0.0%</span></div>
+                            <p class="p-words">This bar shows the percentage of the number of challenges which you were unable to secure a spot in the top 3. You get 1point for participation in any challenge, these points will be used to calculate your overall score so you can guage your progress since you joined M.A.R.S.
+                                Currently, you've lost <span class="num"></span> out of <span class="total"></span> challenges
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="missed">Challenges Missed: <span id="missed"></span></h3>
+                    <p class="paragraph">This block shows the percentage of the number of challenges you did not partake in. You do not get any point for missing any challenge, these points will be used to calculate your overall score so you can guage your progress since you joined M.A.R.S.
+                        Currently, you've missed <span class="num"></span> out of <span class="total"></span> challenges
+                    </p>
+                </div>
+            </div>
+            <div class="remarks"></div>
+        </div>
+    </div>
+    
+    <div class="grid">
+        <div class="gridItem">
+            <h3 class="sub">Challenges Won</h3>
+            <div class="value">You have won <span>3</span> challenges. Good Job!</div>
+        </div>
+        <div class="gridItem">
+            <h3 class="sub">Challenges Entered</h3>
+            <div class="value">You have entered <span>10</span> challenges.</div>
+        </div>
+        <div id="large" class="gridItem">
+            <h3 class="sub">Upcoming Challenges</h3>
+            <div class="value">Your next challenge will take place on <span>26th of January 2006</span> at <span>5:30PM</span></div>
+        </div>
+    </div>
+    <div class="grid2">
+        <a href="./MARSnews.html" target="_blank" class="gridItem2">
+            <h3 class="sub2">M.A.R.S. News</h3>
+        </a>
+        <a href="./commentForm.html" target="_blank" class="gridItem2">
+            <h3 class="sub2">Write us a comment</h3>
+        </a>
+    </div>
+    <div class="exhibition">
+        <div class="exhibitionCast">
+            <a href=""><h1 class="exhibitionText">EXHIBITION</h1></a>
+        </div>
+    </div>
+
+
+    <div class="preloader">
+        <div class="system">
+    
+            <div class="orbit saturn">
+                <div class="planet"></div>
+
+                <div class="orbit jupiter">
+                    <div class="planet"></div>
+
+                    <div class="orbit mars">
+                        <div class="planet"></div>
+
+                        <div class="orbit earth">
+                            <div class="planet"></div>
+
+                            <div class="orbit venus">
+                                <div class="planet"></div>
+
+                                <div class="orbit mercury">
+                                    <div class="planet"></div>
+                                    <div class="sun"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="logo">
+            <div class="titleFooter">M.A.R.S.</div>
+            <div class="phraseFooter">Music and Arts Reinvention School</div>
+        </div>
+        <div class="columnOne">
+            <div class="sections">
+                <h1 class="footerHeading">Contact Us On</h1>
+                <div class="numbers">
+                    <p class="number">08066641923</p>
+                    <p class="number">08066641923</p>
+                </div>
+            </div>
+            <div class="sections">
+                <h1 class="footerHeading">Visit These Sections</h1>
+                <div class="aboutLink"><a class=" footerLinks" href="#about" name="about">About Us</a></div>
+                <div class="jobApply"><a class=" footerLinks" href="./MARSjobs.html">Talent Exhibition</a></div>
+                <div class="newsLink"><a class=" footerLinks" href="./MARSnews.html">Contact Us Form</a></div>
+            </div>
+        </div>
+        <div class="columnTwo">
+            <h1 class="footerHeading">Follow us on</h1>
+            <div class="FbLink"><a class=" footerLinks" href="./MARS.html" name="about">Facebook</a></div>
+            <div class="IntaLink"><a class=" footerLinks" href="./MARSjobs.html">Instagram</a></div>
+        </div>
+    </footer>
+    <script src="../javascript/MARSstudentPage.js"></script>
+</body>
+</html>

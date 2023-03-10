@@ -1,0 +1,422 @@
+    *{
+    margin: 0%;
+    padding: 0%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    background-image: url('../images/black-background.jpg');
+    background-size: 100vw, 100vh;
+    /* background-repeat: no-repeat;     */
+    overflow: hidden;
+}
+
+.formContainer{
+    padding-top: 20px;
+    opacity: 0;
+    width: 40%;
+    min-height: 50%;
+    background-color: white;
+    border-radius: 10px;
+    color: rgb(55, 55, 58);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: all ease .3s;
+}
+.formContainer form{
+    width: 50%;
+    height: 50%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.formContainer form .suspended{
+    display: none;
+    color: red;
+}
+.formContainer form .incorrect{
+    display: none;
+    color: red;
+}
+.formContainer form input{
+    font-style: italic;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: rgb(55, 55, 58);
+    border: 2px solid rgb(55, 55, 58);
+    padding: 5px 10px;
+}
+.formContainer form i{
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    padding: 10px;
+    position: absolute;
+    right: 29%;
+    top: 43.5%;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+.formContainer form i:hover{
+    background-color: rgb(238, 238, 238);
+}
+.submit{
+    font-style: normal !important;
+    border: 0px !important;
+    margin-top: 10px;
+    width: fit-content;
+    border-radius: 15px !important;
+    padding: 10px 25px !important;
+    color: white !important;
+    background-image: linear-gradient(180deg, rgb(55, 55, 58), rgb(31, 31, 31));
+    cursor: pointer;
+    transition: all ease .3s;
+}
+.submit:hover{
+    background-image: linear-gradient(180deg, rgb(82, 82, 85),  rgb(55, 55, 58));
+}
+
+.none{
+    display: none;
+}
+
+.forgot{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    transition: all ease .3s;
+    cursor: pointer;
+    width: fit-content;
+}
+.forgot:hover{
+    text-decoration: underline;
+    color: skyblue;
+}
+
+
+
+
+
+
+
+.cast{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: -50px;
+    padding-top: 50px;
+}
+@keyframes fadeDown {
+    0%{
+        opacity: 0;
+        top: -100%
+    }
+    100%{
+        opacity: 1;
+        top: 50%;
+    }
+}
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+}
+@keyframes fadeRight {
+    0%{
+        transform: translateX(200%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+@keyframes fadeLeft {
+    0%{
+        display: block;
+        transform: translateX(-200%);
+        opacity: 0;
+    }
+    100%{
+        display: block;
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+@keyframes counter-fadeRight {
+    0%{
+        display: block;
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    100%{
+        display: block;
+        transform: translateX(-200%);
+        opacity: 0;
+    }
+}
+@keyframes counter-fadeLeft {
+    0%{
+        display: block;
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    100%{
+        display: block;
+        transform: translateX(200%);
+        opacity: 0;
+    }
+}
+.title{
+    margin: 50px;
+    position: relative;
+    color: skyblue;
+    text-align: center;
+    font-size: 24px;
+    display: none;
+    transition: all ease .3s;
+}
+.title h1{
+    font-size: 90px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-bottom: 3px solid skyblue;
+}
+.title .meaning{
+    border-bottom: 3px solid skyblue;
+}
+.sheet{
+    background-color: white;
+    width: 500px;
+    padding: 30px 40px;
+    border-radius: 20px;
+    position: relative;
+    opacity: 0;
+    transition: all ease .3s;
+}
+form{
+    display: none;
+}
+.input{
+    font-style: italic;
+    width: 90%; 
+    height: 50px;
+    border-radius: 10px;
+    border: 2.5px solid rgb(54, 55, 58);
+    margin: 10px 0px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+.inputSmall{
+    font-style: italic;
+    margin: 10px 20px 10px 0px;
+    padding-left: 10px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 2.5px solid rgb(54, 55, 58);
+    color: rgb(133, 133, 133) !important;
+}
+.Age{
+    width: 70px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.checkbox{
+    display: inline;
+}
+.gender-container{
+    display: inline;
+}
+.Gender{
+    font-style: italic;
+    margin-right: 10px;
+    display: inline;
+    color: rgb(133, 133, 133);
+    font-size: 20px;
+}
+.text{
+    font-style: italic;
+    color: rgb(133, 133, 133);
+    font-size: 20px;
+    margin-left: 20px;
+}
+.data{
+    width: 90%; 
+    height: 50px;
+    border-radius: 10px;
+    border: 2.5px solid rgb(54, 55, 58);
+    margin: 0px 20px 10px 0px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+#Submit{
+    font-size: 20px;
+    margin-top: 10px;
+    width: fit-content;
+    border-radius: 15px;
+    padding: 10px 15px;
+    color: white;
+    background-image: linear-gradient(180deg, rgb(55, 55, 58), rgb(31, 31, 31));
+    cursor: pointer;
+    transition: all ease .3s !important;
+    border: 0px;
+}
+#Submit:hover{
+    background-image: linear-gradient(180deg, rgb(82, 82, 85),  rgb(55, 55, 58));
+}
+.signOptions{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.signOptions button{
+    font-size: 20px;
+    margin-top: 20px;
+    width: fit-content;
+    border-radius: 15px;
+    padding: 10px 15px;
+    color: white;
+    background-image: linear-gradient(180deg, rgb(55, 55, 58), rgb(31, 31, 31));
+    cursor: pointer;
+    transition: all ease .3s !important;
+    border: 0px;
+}
+.signOptions button:hover{
+    background-image: linear-gradient(180deg, rgb(82, 82, 85),  rgb(55, 55, 58));
+}
+.bottom{
+    margin-bottom: 20px;
+}
+
+.grey{
+    color: rgb(133, 133, 133);
+    position: absolute;
+    bottom: 10px;
+}
+
+.successContainer{
+    padding-top: 1%;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    z-index: 300;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    /* background-color: rgba(255, 255, 255, 0.651); */
+    background-color: rgb(54, 55, 58, 0.651);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all ease .4s;
+}
+.successIcon{
+    width: 100px;
+    height: 100px;
+    border: 5px solid lightgreen;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+.success{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 20px;
+    padding-bottom: 50px;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    /* height: 500px; */
+    background-color: white;
+    border-radius: 10px;
+    font-size: 25px;
+    transform: translate(-50%, -50%);
+}
+.success button{
+    width: fit-content;
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+    font-size: 20px;
+    padding: 10px;
+    border: 0px;
+    border-radius: 10px;
+    background-color: lightgreen;
+    color: white;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 768px) {
+    /* .title h1{
+        font-size: 60px;
+    }
+    .title .meaning{
+        font-size: 15px;
+    }
+    .Gender{
+        font-size: 15px;
+    } */
+    body{
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .cast{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+@media only screen and (max-width: 767px) and (min-width: 100px) {
+    *{
+        font-size: 15px !important;
+    }
+    body{
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .title{
+        display: none !important;
+    }
+    .cast{
+        width: 80%;
+        margin: auto;
+    }
+    .sheet{
+        padding: 5% !important;
+    }
+    input{
+        border-radius: 5px !important;
+        height: 30px !important;
+    }
+    .gender-container{
+        display: block;
+        /* border: 1px solid red; */
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        /* position: relative; */
+    }
+    .checkbox{
+        margin-right: 10px;
+    }
+    .grey{
+        font-size: 13px;
+    }
+}

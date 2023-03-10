@@ -1,0 +1,440 @@
+@media only screen and (max-width: 1200px) and (min-width: 850px) {
+    .nav {
+        max-height: 750px;
+    }
+    .navingLinks {
+        font-size: 18px !important;
+    }
+
+    .container {
+        max-height: 700px;
+        margin-bottom: 20px;
+    }
+
+    section.news{
+        width: 90%;
+    }
+    section.news .sub-container{
+        flex-direction: column;
+    }
+    section.news .sub-container aside{
+        width: calc(100% - 40px);
+    }
+    section.news .sub-container aside .random-headline{
+        flex-direction: row;
+    }
+    section.news .sub-container .mini-container{
+        width: calc(100% - 40px);
+    }
+    section.news .paper-name{
+        font-size: 50px;
+    }
+    section.news .main-headline{
+        font-size: 40px;
+    }
+    .overAll .date{
+        right: -30%;
+    }
+    .overAll{
+        overflow-x: hidden;
+    }
+    aside.news-slide {
+        width: 60%;
+        right: -140%;
+    }
+
+
+    .searchtab{
+        width: 400px !important;
+    }
+
+}
+
+@media only screen and (max-width: 850px) and (min-width: 100px) {
+    .nav {
+        max-height: 750px;
+        margin-top: 90px;
+    }
+    .naver {
+        position: fixed;
+    }
+    .naver .links .navingLinks {
+        display: none;
+    }
+    .naver .links .dropdown{
+        display: block;
+        color: rgb(55, 55, 58) !important;
+        margin-right: 20px;
+        cursor: pointer;
+    } 
+    .dropdownNav{
+        display: block;
+        z-index: 100 !important;
+        background-color: white !important;
+        position: absolute;
+        top: -40%;
+        width: 100%;
+        padding: 10px;
+        /* background-color: gray; */
+        transition: all ease .3s;
+    }
+    .dropdownNav a.dropNavItem{
+        display: block;
+        color: rgb(55, 55, 58) !important;
+        text-decoration: none;
+        margin-top: 10px;
+        width: 90%;
+        font-size: 20px;
+        border-bottom: 1px solid rgb(150, 150, 151);
+    }
+
+
+    .profilesDets {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .profilesDets img {
+        width: 200px;
+        height: 200px;
+    }
+    .profilesDets .profileName h1 {
+        font-size: 30px;
+        min-width: min-content;
+    }
+    .quickMenu {
+        width: 100%;
+        justify-content: center;
+    }
+
+
+    section.news{
+        width: 80vw;
+    }
+    section.news .sub-container{
+        flex-direction: column;
+    }
+    section.news .sub-container aside{
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    section.news .sub-container aside .random-headline{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+    }
+    section.news .sub-container aside .random-headline .inner img{
+        width: 100%;
+    }
+    section.news .sub-container .mini-container{
+        width: 100%;
+    }
+    section.news .sub-container .mini-container .random-headline .just-words{
+        height: fit-content;
+        padding: 10px;
+        font-size: 10px;
+    }
+    section.news .paper-name{
+        flex-wrap: wrap;
+        font-size: 50px;
+        padding-left: 0px;
+        height: 100px;
+    }
+    section.news .paper-name span{
+        margin: 0px 10px;
+    }
+    section.news .date{
+        font-size: 8px;
+    }
+    section.news .main-headline{
+        font-size: 20px;
+        height: 100px;
+    }
+    section.news .random-headline .inner h4{
+        font-size: 10px;
+    }
+    .back{
+        width: 60px;
+        font-size: 20px;
+    }
+    .overAll .overAllHeading{
+        font-size: 30px;
+    }
+    .overAll .overAllDetails{
+        font-size: 15px;
+    }
+    .overAll .date{
+        font-size: 15px;
+        right: -20%;
+    }
+    aside.news-slide {
+        width: 80%;
+        right: -140%;
+    }
+
+    .searchtab {
+        width: 270px !important;
+    }
+    main {
+        grid-template-columns: auto auto;
+    }
+
+    .window {
+        width: 70% !important;
+        transform: translateX(30%) !important;
+    }
+    .container > .link {
+        transform: translateX(15%);
+        font-size: 20px;
+    }
+
+    @media only screen and (max-width: 767px) and (min-width: 100px) {
+        .nav {
+            width: fit-content;
+            transform: translateX(-100%);
+            /* display: none; */
+        }
+        .nav .navingLinks {
+            font-size: 15px;
+        }
+
+        .naver .navingLinks{
+            display: none !important;
+        }
+        .naver .home .main{
+            font-size: 30px;
+        }
+        .naver .home .sub{
+            font-size: 7px;
+        }
+        .naver .links .dropdown{
+            display: block;
+            color: white;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .dropdownNav{
+            display: block;
+            z-index: -1;
+            background-color: rgb(55, 55, 58);
+            position: absolute;
+            top: -300%;
+            width: 100%;
+            padding: 10px;
+            /* background-color: gray; */
+            transition: all ease .3s;
+        }
+        .dropNavItem{
+            display: block;
+            color: white !important;
+            text-decoration: none;
+            margin-top: 10px;
+            width: 90%;
+            font-size: 20px;
+            border-bottom: 1px solid rgb(82, 82, 85);
+        }
+
+
+        .container {
+            width: 100%;
+        }
+        .container .title {
+            font-size: 40px !important;
+        }
+
+
+        .profilesDets .profileName h1 {
+            text-align: center;
+        }
+        .quickMenu {
+            justify-content: center;
+            width: 100%;
+        }
+        .quickMenu .btns {
+            width: 100px;
+        }
+        /* .quickMenu .btns:nth-child(6){
+            color: red;
+        } */
+        .quickMenu .btns span {
+            display: none;
+        }
+
+
+        #cont {
+            /* border: 1px solid red; */
+            flex-direction: column;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+        main {
+            /* border: 1px solid red; */
+            width: 100%;
+            margin: 0%;
+            margin-top: 20px;
+            padding: 3%;
+            grid-template-columns: auto auto;
+            gap: 10px;
+        }
+        .student img {
+            height: 50px !important;
+            width: 50px !important;
+        }
+        .student .name {
+            font-size: 15px !important;
+        }
+        .student p {
+            font-size: 10px !important;
+        }
+        .student-view .profile {
+            flex-direction: column;
+        }
+        .student-view .profile .name .nickname {
+            font-size: 15px !important;
+        }
+        .student-view .profile .name .full {
+            font-size: 30px !important;
+        }
+        .student-view .stats-container {
+            flex-direction: column;
+            text-align: center;
+        }
+        .student-view .stats-container .stats div {
+            font-size: 20px !important;
+        }
+        .student-view .menu {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .student-view .menu button {
+            margin-top: 10px;
+        }
+
+
+
+        section.news{
+            width: 80vw;
+        }
+        .news .sub-container{
+            flex-direction: column;
+        }
+        .news .sub-container aside{
+            width: 100%;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        .news .sub-container aside .random-headline{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+            /* flex-direction: row; */
+        }
+        .news .sub-container aside .random-headline .inner img{
+            width: 100%;
+        }
+        .news .sub-container .mini-container{
+            width: 100%;
+        }
+        .news .sub-container .mini-container .random-headline .just-words{
+            height: fit-content;
+            padding: 10px;
+            font-size: 10px;
+        }
+        .news .paper-name{
+            flex-wrap: wrap;
+            font-size: 20px !important;
+            padding-left: 0px;
+            height: 100px;
+        }
+        .news .paper-name span{
+            margin: 0px 10px;
+        }
+        .news .date{
+            font-size: 8px;
+        }
+        .news .main-headline{
+            font-size: 20px;
+            height: 100px;
+        }
+        .news .random-headline .inner h4{
+            font-size: 10px;
+        }
+        .news .clickable {
+            border-radius: 5px !important;
+        }
+        .back{
+            width: 60px;
+            font-size: 20px;
+        }
+        .overAll .overAllHeading{
+            font-size: 30px;
+        }
+        .overAll .overAllDetails{
+            font-size: 15px;
+        }
+        .overAll .date{
+            font-size: 15px;
+            right: -20%;
+        }
+        aside.news-slide {
+            width: 100%;
+            right: -140%;
+        }
+        aside.news-slide .grid-container {
+            display: flex;
+            flex-direction: column;
+            height: 400px;
+        }
+        aside.news-slide .grid-container .inner-grid {
+            overflow-y: hidden ;
+        }
+        aside.news-slide textarea {
+            position: static;
+        }
+        aside.news-slide .sign {
+            margin-bottom: 20px;
+        }
+        aside.news-slide .end {
+            width: 100%;
+        }
+        aside.news-slide .ally {
+            width: 100%;
+        }
+
+        .challengeMenu {
+            /* border: 1px solid red; */
+            width: 100% !important;
+            justify-content: center;
+        }
+        .challengeMenu .btns {
+            width: 100px !important;
+            height: 100px !important;
+            text-align: center;
+            font-size: 15px !important;
+        }
+        .challengeCast .challenge {
+            border-radius: 5px !important;
+        }
+        .challengeCast .challenge h1 {
+            font-size: 20px;
+        }
+        .challengeCast .challenge p {
+            font-size: 15px;
+        }
+
+        .window {
+            width: 105% !important;
+            transform: translateX(0%) !important;
+        }
+        .container > .link {
+            width: 115%;
+            transform: translateX(-5%) !important;
+        }
+        .container > .link i {
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+        }
+    }
+}

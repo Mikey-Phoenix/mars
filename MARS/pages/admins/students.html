@@ -1,0 +1,53 @@
+<div class="container">
+    <div id="cont" style=" display:flex; justify-content:space-between; align-items: center; padding-right: 10px;">
+        <h1 class="title">Students</h1>
+        <div class="searchtab" style="height: 40px; width: 500px; border-radius: 5px; box-shadow: 0px 0px 5px rgb(55, 55, 58); justify-content: space-between; display: flex;">
+            <input type="search" name="" id="searching" style=" border: 1px; width: 90%; height: 100%;" oninput="search()">
+            <button style="width: 10%;"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </div>
+    <main>
+        <div class="student" ng-repeat="student in students">
+            <img src="../../images/profile.jpg" alt="">
+            <p>{{ student.id }}</p>
+            <h4 class="name">{{student.lastName}} {{student.firstName}} {{student.middleName}}</h4>
+            <div class="student-cast" onmouseenter="logger()"></div>
+        </div>
+    </main>
+    <div class="student-view" ng-repeat="student in students" id="{{ student.id }}">
+        <button class="return" style="position: absolute; top: 5%; left: 2%;" onclick="cancel()">Back</button>
+        <div class="profile">
+            <img src="../../images/profile.jpg" alt="">
+            <div class="name">
+                <div class="nickname">{{ student.nickname }}</div>
+                <!-- <div class="nickname">Phoenix</div> -->
+                <div class="full">{{student.lastName}} {{student.firstName}} {{student.middleName}}</div>
+                <!-- <div class="full">Bajo Michael Oluwafisayomi</div> -->
+            </div>
+        </div>
+        <div class="stats-container">
+            <div class="roller-container">
+                <div class="pieContainer">
+                    <!-- <div class="pie animate " style="--p:90; --c:lightgreen; --b:15px"> 90%</div> -->
+                    <div class="pie animate" style="--p: 90; --c: rgb(95, 238, 95); --b: 15px">90%</div>
+                </div>
+            </div>
+            <div class="stats">
+                <div class="won">Challenges Won: <span></span></div>
+                <div class="second">1st Runner Up: <span></span></div>
+                <div class="third">2nd Runner Up: <span></span></div>
+                <div class="lost">Challenges Lost: <span></span></div>
+                <div class="participating">Challenges entered: <span></span></div>
+            </div>
+        </div>
+        <div class="menu">
+            <button>Projects</button>
+            <button>Comments</button>
+            <button>Strikes</button>
+
+            <button>Message</button>
+            <button>Suspend</button>
+            <button>Expell</button>
+        </div>
+    </div>
+</div>

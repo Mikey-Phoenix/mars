@@ -1,0 +1,8 @@
+First Name
+Middle Name
+Last Name
+Nickname
+Profile Picture
+Email Address
+Age
+Gender

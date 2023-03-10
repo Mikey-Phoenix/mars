@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/MARS.css">
+    <script src="https://kit.fontawesome.com/35b2c289c2.js" crossorigin="anonymous"></script>
+    <!-- onload="brick()" -->
+</head>
+<body class="white">
+    <div class="hero" id="hero">
+        <div class="opening-words">
+            <p>WELCOME TO</p>
+            <h1>M.A.R.S.</h1>
+            <p class="meaning">Music and Arts Reinvention School</p>
+            <span id="about">   </span>
+        </div>
+        <div class="buttons">
+            <a onclick="logging('log')" href="./MARSlogin.html" target="_blank"><button class="login">Log In</button></a>
+            <a onclick="logging('sign')" href="./MARSlogin.html" target="_blank"><button class="login">Sign Up</button></a>
+        </div>
+        <!-- <img src="" alt="Hero" id="hero"/> -->
+    </div>
+    <div class="almighty">
+
+        <div class="nav">
+            <a href="./MARS.html#hero" class="home"><span class="main"> M.A.R.S.</span><span class="sub">Music and Arts Reinvention School</span></a>
+            <div class="links">
+                <a href="./MARS.html" class="active-page navingLinks">Home</a>
+                <a href="./MARS.html#about" class="navingLinks">About</a>
+                <a href="./MARS.html#contact" class="navingLinks">Contact</a>
+                <a href="./MARSnews.html" class="navingLinks">News</a>
+                <div class="dropdown"><i class="fa-solid fa-angle-down"></i></div>
+            </div>
+        </div>
+    
+        <a href="#hero" class="top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+        
+        <h1 class="offerHeading" id="about">About Us</h1>
+        <div class="about">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, tempore atque blanditiis quidem, in sit qui dolorem neque sunt perspiciatis tenetur aut. Adipisci, dicta nostrum consectetur iusto et facilis dolorum?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, tempore atque blanditiis quidem, in sit qui dolorem neque sunt perspiciatis tenetur aut. Adipisci, dicta nostrum consectetur iusto et facilis dolorum?
+            </p>
+            <div class="system">
+                <div class="orbit pluto">
+                    <div class="planet"></div>
+        
+                    <div class="orbit neptune">
+                        <div class="planet"></div>
+        
+                        <div class="orbit uranus">
+                            <div class="planet"></div>
+        
+                            <div class="orbit saturn">
+                                <div class="planet"></div>
+        
+                                <div class="orbit jupiter">
+                                    <div class="planet"></div>
+        
+                                    <div class="orbit mars">
+                                        <div class="planet"></div>
+        
+                                        <div class="orbit earth">
+                                            <div class="planet"></div>
+        
+                                            <div class="orbit venus">
+                                                <div class="planet"></div>
+        
+                                                <div class="orbit mercury">
+                                                    <div class="planet"></div>
+                                                    <div class="sun"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="lightContainer">
+                <div class="lightTop">
+                    <div class="light"></div>
+                    <div class="light"></div>
+                    <div class="light"></div>
+                    <div class="light"></div>
+                    <div class="light"></div>
+                    <div class="light"></div>
+                    <div class="light"></div>
+                    <div class="light"></div>
+                    <div class="light"></div>
+                    <div class="light"></div>
+                </div>
+                <div class="sides">
+                    <div class="lightLeft">
+                        <div class="light"></div>
+                        <div class="light"></div>
+                        <div class="light"></div>
+                        <div class="light"></div>
+                        <div class="light"></div>
+                    </div>
+                    <div class="lightRight">
+                        <div class="light"></div>
+                        <div class="light"></div>
+                        <div class="light"></div>
+                        <div class="light"></div>
+                        <div class="light"></div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <h1 class="offerHeading">What We Offer</h1>
+        <div class="offerContainer">
+            <div class="offers">
+                <div class="offer offer-one">
+                    <i class="fa-solid  pin"></i>
+                    <h3 class="offer-title">Showcase your talents</h3></br>
+                    <p class="offer-details">
+                        <span class="content content-one"></span><span>|</span>
+                    </p>
+                    <i class="fa-solid star"></i>
+                </div>
+                <div class="offer offer-two">
+                    <i class="fa-solid  pin"></i>
+                    <h3 class="offer-title">Voice and Sound Coaching</h3></br>
+                    <p class="offer-details">
+                        <span class="content content-two"></span><span>|</span>
+                    </p>
+                    <i class="fa-solid star"></i>
+                </div>
+                <div class="offer offer-three">
+                    <i class="fa-solid  pin"></i>
+                    <h3 class="offer-title">Fun Challenges</h3></br>
+                    <p class="offer-details">
+                        <span class="content content-three"></span><span>|</span>
+                    </p>
+                    <i class="fa-solid star"></i>
+                </div>
+                <div class="offer offer-four">
+                    <i class="fa-solid  pin"></i>
+                    <h3 class="offer-title" id="inter">Live WhatsApp group</h3></br>
+                    <p class="offer-details">
+                        <span class="content content-four"></span><span>|</span>
+                    </p>
+                    <i class="fa-solid star"></i>
+                </div>
+            </div>
+            <div class="offerImageContainer">
+                <img src="../images/talents.jpg" alt="Talents" class="offerImage" id="offerImageOne" onclick="displayer('Showcase your talents', one, textOne)">
+                <img src="../images/mic.jpg" alt="Voice and Sound Coaching" class="offerImage" id="offerImageTwo" onclick="displayer('Voice and Sound Coaching', two, textTwo)">
+                <img src="../images/fun.jpg" alt="" class="offerImage" id="offerImageThree" onclick="displayer('Fun Challenges', three, textThree)">
+                <img src="../images/whatsaap-resized.jpg" alt="" width="500px" class="offerImage" id="offerImageFour" onclick="displayer('Live WhatsApp group', four, textFour)">
+            </div>
+        </div>
+
+        <div class="overAllContainer">
+            <div class="back">&#10132</div>
+            <div class="overAll">
+                <div class="castContainer">
+                    <img src="../images/fun.jpg" alt="fun" class="upperimg"></img>
+                    <div class="castUp">
+                    </div>
+                </div>
+                <div id="overAllWords">
+                    <h3 class="overAllHeading">Showcase your talents</h3><br/>
+                    <p class="overAllDetails">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur, qui amet sint omnis reprehenderit modi commodi hic obcaecati officia numquam dolor quibusdam neque autem, non corporis doloribus reiciendis libero voluptatibus!</p>
+                </div>
+                <div class="castContainer">
+                    <img src="../images/fun.jpg" alt="fun" class="lowerimg"></img>
+                    <div class="castDown">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+        <div class="comments">
+            <div class="comment left">
+                <div class="commentHead">
+                    <img src="../images/profile.jpg" alt="profile" class="commentImage">
+                    <div class="commentName">David</div>
+                </div>
+                <div class="commentWords"><span class="commentWordsInner one"></span><span class="readMore" onclick="reading(0, copyOne)">...Read More</span></div>
+            </div>
+            <div class="comment right">
+                <div class="commentHead">
+                    <img src="../images/profile.jpg" alt="profile" class="commentImage">
+                    <div class="commentName">Gabriel</div>
+                </div>
+                <div class="commentWords"><span class="commentWordsInner two"></span><span class="readMore" onclick="reading(1, copyTwo)">...Read More</span></div>
+            </div>
+            <div class="comment left">
+                <div class="commentHead">
+                    <img src="../images/profile.jpg" alt="profile" class="commentImage">
+                    <div class="commentName">Raphael</div>
+                </div>
+                <div class="commentWords"><span class="commentWordsInner three"></span><span class="readMore" onclick="reading(2, copyThree)">...Read More</span></div>
+            </div>
+            <div class="comment right">
+                <div class="commentHead">
+                    <img src="../images/profile.jpg" alt="profile" class="commentImage">
+                    <div class="commentName">James</div>
+                </div>
+                <div class="commentWords"><span class="commentWordsInner four"></span><span class="readMore" onclick="reading(3, copyFour)">...Read More</span></div>
+            </div>
+        </div>
+
+        <div class="exhibition">
+            <div class="exhibitionCast">
+                <a href=""><h1 class="exhibitionText">EXHIBITION</h1></a>
+            </div>
+        </div>
+
+        <section class="contact" id="contact">
+            <h1 class="contactUs">Contact Us</h1>
+            <div class="contactContainer">
+                <div class="system">
+                    <div class="orbit pluto">
+                        <div class="planet"></div>
+            
+                        <div class="orbit neptune">
+                            <div class="planet"></div>
+            
+                            <div class="orbit uranus">
+                                <div class="planet"></div>
+            
+                                <div class="orbit saturn">
+                                    <div class="planet"></div>
+            
+                                    <div class="orbit jupiter">
+                                        <div class="planet"></div>
+            
+                                        <div class="orbit mars">
+                                            <div class="planet"></div>
+            
+                                            <div class="orbit earth">
+                                                <div class="planet"></div>
+            
+                                                <div class="orbit venus">
+                                                    <div class="planet"></div>
+            
+                                                    <div class="orbit mercury">
+                                                        <div class="planet"></div>
+                                                        <div class="sun"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="lightContainer">
+                    <div class="lightTop">
+                        <div class="light"></div>
+                        <div class="light"></div>
+                        <div class="light"></div>
+                        <div class="light"></div>
+                        <div class="light"></div>
+                        <div class="light"></div>
+                        <div class="light"></div>
+                        <div class="light"></div>
+                        <div class="light"></div>
+                        <div class="light"></div>
+                    </div>
+                    <div class="sides">
+                        <div class="lightLeft">
+                            <div class="light"></div>
+                            <div class="light"></div>
+                            <div class="light"></div>
+                            <div class="light"></div>
+                            <div class="light"></div>
+                        </div>
+                        <div class="lightRight">
+                            <div class="light"></div>
+                            <div class="light"></div>
+                            <div class="light"></div>
+                            <div class="light"></div>
+                            <div class="light"></div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="contactInner">
+                    <a href="mailto:bajomichael06@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i>bajomichael06@gmail.com</a>
+                    <a tel="tel:08168562130"><i class="fa-solid fa-phone"></i>08168562130</a>
+                    <a href="" target="_blank"><i class="fa-brands fa-facebook"></i>M.A.R.S.</a>
+                    <a href="" target="_blank"><i class="fa-brands fa-instagram"></i>Music and Arts Reinvention School</a>
+                    <a href="./commentForm.html" target="_blank"><button class="contactForm">Leave A Comment</button></a>
+                </div>
+            </div>
+        </section>
+
+        <div class="preloader">
+            <div class="system">
+        
+                <div class="orbit saturn">
+                    <div class="planet"></div>
+
+                    <div class="orbit jupiter">
+                        <div class="planet"></div>
+
+                        <div class="orbit mars">
+                            <div class="planet"></div>
+
+                            <div class="orbit earth">
+                                <div class="planet"></div>
+
+                                <div class="orbit venus">
+                                    <div class="planet"></div>
+
+                                    <div class="orbit mercury">
+                                        <div class="planet"></div>
+                                        <div class="sun"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+        <footer class="footer">
+            <div class="logo">
+                <div class="titleFooter">M.A.R.S.</div>
+                <div class="phraseFooter">Music and Arts Reinvention School</div>
+            </div>
+            <div class="columnOne">
+                <div class="sections">
+                    <h1 class="footerHeading">Contact Us On</h1>
+                    <div class="numbers">
+                        <p class="number">08066641923</p>
+                        <p class="number">08066641923</p>
+                    </div>
+                </div>
+                <div class="sections">
+                    <h1 class="footerHeading">Visit These Sections</h1>
+                    <div class="aboutLink"><a class=" footerLinks" href="#about" name="about">About Us</a></div>
+                    <div class="jobApply"><a class=" footerLinks" href="./MARSjobs.html">Talent Exhibition</a></div>
+                    <div class="newsLink"><a class=" footerLinks" href="./MARSnews.html">Contact Us Form</a></div>
+                </div>
+                <div class="columnTwo">
+                    <h1 class="footerHeading">Follow us on</h1>
+                    <div class="FbLink"><a class=" footerLinks" href="./MARS.html" name="about">Facebook</a></div>
+                    <div class="IntaLink"><a class=" footerLinks" href="./MARSjobs.html">Instagram</a></div>
+                </div>
+            </div>
+            <!-- <div class="columnTwo">
+                <h1 class="footerHeading">Follow us on</h1>
+                <div class="FbLink"><a class=" footerLinks" href="./MARS.html" name="about">Facebook</a></div>
+                <div class="IntaLink"><a class=" footerLinks" href="./MARSjobs.html">Instagram</a></div>
+            </div> -->
+        </footer>
+    </div>
+
+    <script src="../javascript/MARS.js"></script>
+    
+</body>
+</html>

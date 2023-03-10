@@ -1,0 +1,68 @@
+[
+    {
+        "id": "STUD1001",
+        "password": 1001,
+        "lastName": "Bajo",
+        "firstName": "Michael",
+        "middleName": "Oluwafisayomi",
+        "age": 16,
+        "email": "bajomichael06@gmail.com",
+        "gender": "male",
+        "nickname": "Phoenix"
+    },
+    {
+        "id": "STUD1002",
+        "password": 1002,
+        "lastName": "Jolaoso",
+        "firstName": "Kawthar",
+        "middleName": "Bolajoko",
+        "age": 18,
+        "email": "bajomichael06@gmail.com",
+        "gender": "female",
+        "nickname": "Candy"
+    },
+    {
+        "id": "STUD1003",
+        "password": 1003,
+        "lastName": "Ugwumadu",
+        "firstName": "Jessica",
+        "middleName": "Chioma",
+        "age": 18,
+        "email": "bajomichael06@gmail.com",
+        "gender": "female",
+        "nickname": "Choco Milo"
+    },
+    {
+        "id": "STUD1004",
+        "password": 1004,
+        "lastName": "Ojeikwe",
+        "firstName": "Gerrard",
+        "middleName": "Dalosspikin",
+        "age": 17,
+        "email": "bajomichael06@gmail.com",
+        "gender": "male",
+        "nickname": "W.A.P."
+    },
+    {
+        "id": "STUD1005",
+        "password": 1005,
+        "lastName": "Nneche",
+        "firstName": "Jessica",
+        "middleName": "Isioma",
+        "age": 18,
+        "email": "bajomichael06@gmail.com",
+        "gender": "female",
+        "nickname": "Breezy"
+    },
+    {
+        "id": "STUD1006",
+        "password": 1006,
+        "lastName": "Soremi",
+        "firstName": "Dunmola",
+        "middleName": "Bethany",
+        "age": 19,
+        "email": "bajomichael06@gmail.com",
+        "gender": "female",
+        "nickname": "Bad-Blood"
+    }
+]
